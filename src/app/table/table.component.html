@@ -1,0 +1,44 @@
+<h3>Bookshelf</h3>
+<table class="bookshelf fancyTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{ book.name }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.price | currency }}</td>
+      <td>
+        <button (click)="addToCart(book)">Add to Cart</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Shopping Cart ({{ shoppingCart.length }})</h3>
+<table class="cart fancyTable">
+  <thead>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cartItem of shoppingCart; let i = index">
+      <td>{{ cartItem.name }}</td>
+      <td>{{ cartItem.price | currency }}</td>
+      <td>
+        <button (click)="removeFromCart(i)">Remove</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <strong>Subtotal: {{ cartTotal | currency }}</strong>
+      </td>
+    </tr>
+  </tbody>
+</table>

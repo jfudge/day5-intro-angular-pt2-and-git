@@ -1,0 +1,13 @@
+table.fancyTable {
+  border: 1px solid #666;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.fancyTable th {
+  border: 1px solid #666;
+}
+
+table.fancyTable td {
+  border: 1px solid #666;
+}
