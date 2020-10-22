@@ -1,1 +1,1 @@
-# day5-intro-angular-pt2-and-git
+# Angular review notes for day5 Sceneca
